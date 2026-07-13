@@ -1,0 +1,17 @@
+{
+  "name": "BioColor Lab V3",
+  "short_name": "BioColor Lab",
+  "description": "Aplicación educativa sobre prevención del consumo de drogas mediante un bioindicador interactivo.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#071426",
+  "theme_color": "#22c55e",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icono.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

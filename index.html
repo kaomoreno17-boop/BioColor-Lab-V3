@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BioColor Lab V3 | Bioindicador Inteligente</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="estilos.css">
+<link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+<div id="fondo-animado"></div>
+
+<header class="pantalla activa" id="inicio">
+
+<div class="glass bienvenida">
+
+<div class="logo">
+
+🧪🧠
+
+</div>
+
+<h1>BioColor Lab V3</h1>
+
+<h2>Bioindicador Inteligente para la Prevención del Consumo de Drogas</h2>
+
+<p>
+
+Explora de forma interactiva cómo diferentes sustancias afectan el organismo, el cerebro y el bienestar. Esta aplicación tiene fines educativos y busca fomentar la prevención y la toma de decisiones informadas.
+
+</p>
+
+<button onclick="mostrarMenu()">
+
+Comenzar
+
+</button>
+
+</div>
+
+</header>
+
+<section id="menu" class="pantalla">
+
+<h2>Menú Principal</h2>
+
+<div class="menu-grid">
+
+<div class="card" onclick="abrirPantalla('simulador')">
+
+<div class="icono">🧪</div>
+
+<h3>Simulador Inteligente</h3>
+
+<p>
+
+Observa el nivel de riesgo de diferentes sustancias mediante un bioindicador interactivo.
+
+</p>
+
+</div>
+
+<div class="card" onclick="abrirPantalla('cerebro')">
+
+<div class="icono">🧠</div>
+
+<h3>Efectos en el Cerebro</h3>
+
+<p>
+
+Conoce cómo distintas sustancias pueden afectar funciones cerebrales importantes.
+
+</p>
+
+</div>
+
+<div class="card" onclick="abrirPantalla('drogas')">
+
+<div class="icono">💊</div>
+
+<h3>Información</h3>
+
+<p>
+
+Consulta fichas educativas sobre diversas sustancias y sus posibles efectos.
+
+</p>
+
+</div>
+<div class="card" onclick="abrirPantalla('riesgo')">
+
+<div class="icono">📊</div>
+
+<h3>Nivel de Riesgo</h3>
+
+<p>
+
+Identifica visualmente el nivel de afectación física y psicológica mediante una escala interactiva.
+
+</p>
+
+</div>
+
+<div class="card" onclick="abrirPantalla('prevencion')">
+
+<div class="icono">🌱</div>
+
+<h3>Prevención</h3>
+
+<p>
+
+Aprende estrategias para prevenir el consumo y promover hábitos saludables.
+
+</p>
+
+</div>
+
+<div class="card" onclick="abrirPantalla('creditos')">
+
+<div class="icono">👤</div>
+
+<h3>Créditos</h3>
+
+<p>
+
+Conoce la información del proyecto y de su autora.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================== SIMULADOR ===================== -->
+
+<section id="simulador" class="pantalla">
+
+<h2>🧪 Simulador Inteligente</h2>
+
+<p class="subtitulo">
+
+Selecciona una sustancia para observar una representación educativa del nivel de riesgo.
+
+</p>
+
+<div class="botones-drogas">
+
+<button onclick="mostrarDroga('alcohol')">🍺 Alcohol</button>
+
+<button onclick="mostrarDroga('tabaco')">🚬 Tabaco</button>
+
+<button onclick="mostrarDroga('marihuana')">🌿 Marihuana</button>
+
+<button onclick="mostrarDroga('cocaina')">💉 Cocaína</button>
+
+<button onclick="mostrarDroga('tusi')">🩷 Tusi</button>
+
+</div>
+
+<div class="simulador-contenedor">
+
+<div class="tubo">
+
+<div id="liquido" class="liquido"></div>
+
+</div>
+
+<div class="panel-info">
+
+<h3 id="nombreDroga">
+
+Selecciona una sustancia
+
+</h3>
+
+<p id="danioFisico">
+
+Daño físico: —
+
+</p>
+
+<p id="danioPsicologico">
+
+Daño psicológico: —
+
+</p>
+
+<p id="nivelRiesgo">
+
+Nivel de riesgo: —
+
+</p>
+
+<p id="mensaje">
+
+Pulsa uno de los botones para comenzar.
+
+</p>
+
+</div>
+
+</div>
+
+<button class="volver" onclick="volverMenu()">
+
+← Volver al menú
+
+</button>
+
+</section>
+<!-- ===================== EFECTOS EN EL CEREBRO ===================== -->
+
+<section id="cerebro" class="pantalla">
+
+<h2>🧠 Efectos en el Cerebro</h2>
+
+<div class="glass">
+
+<div class="cerebro-icono">
+
+🧠
+
+</div>
+
+<h3 id="tituloCerebro">
+
+El cerebro y las sustancias
+
+</h3>
+
+<p id="textoCerebro">
+
+El cerebro controla la memoria, las emociones, el aprendizaje, la coordinación y la toma de decisiones. El consumo de drogas puede alterar estas funciones y producir consecuencias a corto y largo plazo.
+
+</p>
+
+<ul class="lista-cerebro">
+
+<li>🧩 Memoria y aprendizaje.</li>
+
+<li>😊 Estado de ánimo.</li>
+
+<li>⚡ Sistema de recompensa.</li>
+
+<li>🎯 Atención y concentración.</li>
+
+<li>🚶 Coordinación y equilibrio.</li>
+
+</ul>
+
+</div>
+
+<button class="volver" onclick="volverMenu()">
+
+← Volver al menú
+
+</button>
+
+</section>
+
+<!-- ===================== INFORMACIÓN ===================== -->
+
+<section id="drogas" class="pantalla">
+
+<h2>💊 Información de las Sustancias</h2>
+
+<div class="glass">
+
+<h3 id="tituloDroga">
+
+Prevención e información
+
+</h3>
+
+<p id="descripcionDroga">
+
+Selecciona una sustancia en el simulador para conocer sus posibles efectos físicos, psicológicos y sociales. La información presentada tiene fines educativos y de prevención.
+
+</p>
+
+<div class="info-grid">
+
+<div class="info-card">
+
+<h4>🩺 Daños físicos</h4>
+
+<p id="fisicoInfo">
+
+—</p>
+
+</div>
+
+<div class="info-card">
+
+<h4>🧠 Daños psicológicos</h4>
+
+<p id="psicoInfo">
+
+—</p>
+
+</div>
+
+<div class="info-card">
+
+<h4>⚠️ Consecuencias</h4>
+
+<p id="consecuenciaInfo">
+
+—</p>
+
+</div>
+
+</div>
+
+</div>
+
+<button class="volver" onclick="volverMenu()">
+
+← Volver al menú
+
+</button>
+
+</section>
+<!-- ===================== NIVEL DE RIESGO ===================== -->
+
+<section id="riesgo" class="pantalla">
+
+<h2>📊 Escala de Nivel de Riesgo</h2>
+
+<div class="glass">
+
+<p class="subtitulo">
+
+Cada color representa un nivel de riesgo educativo basado en los posibles efectos físicos y psicológicos del consumo de sustancias.
+
+</p>
+
+<div class="escala-riesgo">
+
+<div class="nivel verde">
+<h3>🟢 Bajo</h3>
+<p>No existe evidencia de afectación significativa.</p>
+</div>
+
+<div class="nivel azul">
+<h3>🔵 Moderado</h3>
+<p>Pueden aparecer efectos leves y cambios de comportamiento.</p>
+</div>
+
+<div class="nivel morado">
+<h3>🟣 Alto</h3>
+<p>Existe un mayor riesgo de dependencia y afectación emocional.</p>
+</div>
+
+<div class="nivel naranja">
+<h3>🟠 Muy Alto</h3>
+<p>Se incrementan los daños físicos, psicológicos y sociales.</p>
+</div>
+
+<div class="nivel rojo">
+<h3>🔴 Crítico</h3>
+<p>Puede poner en grave riesgo la salud y la vida de la persona.</p>
+</div>
+
+</div>
+
+</div>
+
+<button class="volver" onclick="volverMenu()">
+
+← Volver al menú
+
+</button>
+
+</section>
+
+<!-- ===================== PREVENCIÓN ===================== -->
+
+<section id="prevencion" class="pantalla">
+
+<h2>🌱 Educación y Prevención</h2>
+
+<div class="glass">
+
+<h3>¿Cómo prevenir el consumo?</h3>
+
+<ul class="lista-prevencion">
+
+<li>✅ Mantener una buena comunicación con la familia.</li>
+
+<li>✅ Informarse con fuentes confiables.</li>
+
+<li>✅ Elegir amistades que promuevan hábitos saludables.</li>
+
+<li>✅ Practicar deporte, arte o actividades recreativas.</li>
+
+<li>✅ Buscar ayuda profesional cuando sea necesario.</li>
+
+</ul>
+
+<div class="mensaje-final">
+
+💚 La prevención comienza con el conocimiento. Cada decisión puede marcar una gran diferencia.
+
+</div>
+
+</div>
+
+<button class="volver" onclick="volverMenu()">
+
+← Volver al menú
+
+</button>
+
+</section>
+<!-- ===================== CRÉDITOS ===================== -->
+
+<section id="creditos" class="pantalla">
+
+<div class="glass">
+
+<h2>👤 Créditos</h2>
+
+<p>
+
+<strong>Proyecto:</strong> BioColor Lab V3
+
+</p>
+
+<p>
+
+<strong>Tema:</strong> Bioindicador Inteligente para la Prevención del Consumo de Drogas
+
+</p>
+
+<p>
+
+<strong>Autoras:</strong>Kaory Moreno Rodríguez y Fátima Cerna Gutiérrez
+
+</p>
+
+<p>
+
+<strong>Institución:</strong> Colegio Santa Rosa
+
+</p>
+
+<p>
+
+<strong>Finalidad:</strong> Aplicación web educativa desarrollada para promover la prevención, el conocimiento científico y la concientización sobre los efectos del consumo de drogas.
+
+</p>
+
+<div class="mensaje-final">
+
+🧪 "La ciencia nos ayuda a comprender. La educación nos ayuda a prevenir."
+
+</div>
+
+<button class="volver" onclick="volverMenu()">
+
+← Volver al menú
+
+</button>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 BioColor Lab V3 | Proyecto Educativo
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
